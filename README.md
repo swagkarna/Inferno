@@ -46,8 +46,13 @@ Simple command line tool for virus creation. Written on C#
 
 
 # :book: All commands:
-* STEALLER  
-	Get passwords from chromium based browsers.
+* STEALER  
+	Get data from chromium based browsers.
+	* PASSWORDS  `Get passwords`
+	* CREDIT_CARDS  `Get credit cards`
+	* BOOKMARKS  `Get bookmarks`
+	* HISTORY  `Get history`
+	* COOKIES  `Get cookies`
 * CDROM  
 	Open or close CDROM by letter. If letter is not selected it will user all CDROMs.
 	* OPEN drive/null  `Open cdrom`
